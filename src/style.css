@@ -1,0 +1,573 @@
+.news-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    max-width:100%;
+    margin:0 auto;
+    padding:0.5rem;
+    flex-direction:column;
+}
+.news-container .news{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:90%;   
+    margin:1rem 0;
+    flex-wrap:wrap;
+
+
+
+}
+.news-card{
+    margin:0.5rem 0.75rem;
+    
+    width:30%;
+    height:auto;
+    border:0.25px solid #3c3c3c;
+    transition:0.2s ease-in-out;
+}
+.news-card:hover{
+    border:0.5px solid #9c9c9c;
+}
+.heading{
+    font-size:3rem;
+    letter-spacing:1px;
+    font-weight:600;
+    text-align:center;
+    margin:1rem;
+    color:#eee;
+}
+img{
+    width: 100%; /* Ensure the image fills the width of the card */
+    height: 2rem; /* Make the image fill the height of its parent */
+    object-fit: cover; /* Ensure the image covers the entire space */
+
+}
+.news-btn{
+    display:block;
+    font-size:1rem;
+    letter-spacing:0.5px;
+    height:1.75rem;;
+    /* line-height: */
+    text-align:center;
+    padding-left:0;
+    padding-right:0;
+    padding:0 0.8rem;
+    border:0.5px solid #3c3c3c;
+    border-radius:5rem;
+    width:100%;
+    color:#ccc;
+    font-weight:400;
+    margin: auto;
+}
+.news-bth:hover{
+    border:0.75px solid #ccc;
+    color:#efefef;
+}
+.news-card:hover .news-btn{
+    border:0.5px solid #9c9c9c;
+    color:#eee;
+
+}
+.card-header{
+    font-size:1.2rem;
+    padding:0;
+    line-height:1.5rem;
+    letter-spacing:1px;
+}
+p{
+    font-size:0.9rem;
+}
+.card-body{
+    padding:0.5rem 1rem;
+    gap:0.5rem;
+}
+button{
+    z-index:999989;
+}
+.image-container{
+      height: 150px; /* Set your desired fixed height for the image */
+    overflow: hidden;
+    border-radius:0.2rem;
+    padding:0.25rem;
+}
+.image-container img{
+    object-fit:fill;
+    width: 100%;
+      height: 100%; /* Make sure the image fills the container */
+    position:relative;
+    border:0.25px solid #555;
+    transition:0.4s ease-in-out
+}
+.card.card-image-cover img:last-child {
+    /* border-bottom-left-radius:0.75rem;
+    border-bottom-right-radius: 0.75rem; */
+    height: 100%;
+    max-width: 100%;
+    border-radius: 0.2rem;
+
+}
+.news-card:hover .image-container img{
+    border:0.5px solid #777;
+}
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+        padding: 0.3rem 0.2rem;
+    margin-top: 1rem;
+}
+.pagination .btn{
+    padding: 0.2rem 0.5rem;
+    /* margin: 0.2rem 0.5rem; */
+    border-radius: 0.4rem;
+    border:0.25px solid #555;
+}
+.news {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16%, 1fr));
+    gap: 1.5rem; /* Adjust the gap between items as needed */
+    
+}
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 10rem;
+    aspect-ratio: 1;
+    --c:no-repeat radial-gradient(farthest-side,#007bff 92%,#0000);
+    background: 
+      var(--c) 50%  0, 
+      var(--c) 50%  100%, 
+      var(--c) 100% 50%, 
+      var(--c) 0    50%;
+    background-size: 0.75rem 0.75rem;
+    animation: l18 1s infinite;
+    position: relative;
+  }
+  .loader::before {    
+    content:"";
+    position: absolute;
+    inset:0;
+    margin: 0.3rem;
+    background: repeating-conic-gradient(#0000 0 35deg,#007bff 0 90deg);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0);
+    border-radius: 50%;
+  }
+  @keyframes l18 { 
+    100%{transform: rotate(.5turn)}
+  }
+  .loader{
+    margin: 1rem;
+  }
+.news-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+}
+.heading{
+    margin-bottom: 2.5rem;
+}
+.navbar{
+    max-width: 90%;
+    justify-content: center;
+    margin: auto;
+    top: 1rem;
+    border-bottom: 0;
+    border: 0.25px solid #3c3c3c;
+    border-radius: 0.8rem;
+    transition: 0.3s ease-in-out;
+}
+.navbar:hover{
+    border: 0.75px solid #777;
+}
+.news-card{
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+}
+.image-container{
+    border-radius: 0rem;
+}
+/* Updated style.css */
+
+/* Ensure the news cards adjust their layout based on screen size */
+.news {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16%, 1fr));
+    gap: 0.5rem; /* Adjust the gap between items as needed */
+}
+
+/* Make the loader smaller on smaller screens */
+.loader {
+    width: 5rem;
+    aspect-ratio: 1;
+}
+
+/* Adjust Navbar layout for smaller screens */
+.navbar {
+    max-width: 90%;
+    justify-content: center;
+    margin: auto;
+    top: 1rem;
+    border-bottom: 0;
+    border: 0.25px solid #3c3c3c;
+    border-radius: 0.8rem;
+    transition: 0.3s ease-in-out;
+}
+
+/* Add media queries for responsive adjustments */
+@media screen and (max-width: 1106px) {
+    .news {
+        grid-template-columns: repeat(auto-fill, minmax(90%, 1fr)); /* Adjust column width */
+        gap: 0.2rem; /* Adjust the gap between items as needed */
+    }
+    .news-container .news{
+        
+        width:100%;   
+        margin:0.5rem 0;
+        flex-wrap:wrap;
+    
+    
+    
+    }
+    .news-card{
+        margin:0.5rem 0.75rem;
+        
+        width:45%;
+        height:auto;
+        border:0.25px solid #3c3c3c;
+        transition:0.2s ease-in-out;
+    }
+    .loader {
+        width: 3rem;
+    }
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 0.3rem 0.2rem;
+    margin-top: 0.5rem;
+}
+    .navbar {
+        max-width: 100%; /* Adjust Navbar width for smaller screens */
+    }
+    .heading{
+        font-size: 2.25rem;
+    }
+}
+@media screen and (max-width: 706px) {
+    .news {
+        grid-template-columns: repeat(auto-fill, minmax(90%, 1fr)); /* Adjust column width */
+        gap: 0.2rem; /* Adjust the gap between items as needed */
+    }
+    .news-container .news{
+        
+        width:100%;   
+        margin:0.5rem 0;
+        flex-wrap:wrap;
+    
+    
+    
+    }
+    .news-card{
+        margin:0.5rem 0.75rem;
+        
+        width:90%;
+        height:auto;
+        border:0.25px solid #3c3c3c;
+        transition:0.2s ease-in-out;
+    }
+    .loader {
+        width: 3rem;
+        margin-bottom: 0.25rem;
+
+    }
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 0.3rem 0.2rem;
+    margin-top: 0.5rem;
+}
+    .navbar {
+        max-width: 100%; /* Adjust Navbar width for smaller screens */
+    }
+    .heading{
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
+    }
+}
+.card-text{
+    display:flex;
+    justify-content:right;
+    text-align: right;
+    color: #acacac;
+    text-decoration: underline;
+    padding: 0.4rem 0;
+}
+.author-date {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.author {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.date {
+    font-size: 0.8rem;
+    color: #777;
+    text-transform: capitalize;
+    
+}
+
+.image-container{
+    padding: 0.1rem;
+}
+.badge {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    padding:0;
+    color: #7c7c7c;
+    font-size: 0.8rem;
+    border-radius: 0.25rem;
+    z-index: 9999;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+.news-btn{
+    margin-bottom: 0;
+    height: auto;
+    padding: 0.25rem 0;
+}
+.card-footer{
+    margin-bottom: 0;
+}
+.card {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #eee;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    z-index: 1; /* Ensure badge appears above the image */
+    display: block;
+    width: auto;
+    /* right: 1rem; */
+
+}
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.news-container {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0.5rem;
+    flex-direction: column;
+    margin-top: 7rem; /* Adjust as needed */
+}
+.news-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 7rem auto 0;
+    padding: 0.5rem;
+}
+
+.news-wrapper {
+    width: 100%;
+    max-width: 1200px; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.news {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Other styles... */
+/* Remaining CSS styles remain unchanged */
+.loader{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Other styles... */
+.loader {
+    /* Center the loader horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Loader styles */
+    width: 5rem;
+    height: 5rem;
+    /* Loader animation */
+    --c: no-repeat radial-gradient(farthest-side, #007bff 92%, #0000);
+    background:
+        var(--c) 50% 0,
+        var(--c) 50% 100%,
+        var(--c) 100% 50%,
+        var(--c) 0 50%;
+    background-size: 0.75rem 0.75rem;
+    animation: l18 1s infinite;
+    position: relative;
+}
+.news-container .news {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0.3rem 1.5rem;
+    margin: 0.2rem;
+    }
+/* Other CSS styles remain unchanged */
+.news {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16%, 1fr));
+    gap: 1rem; /* Adjust the gap between items as needed */
+    
+}
+.search-container{
+    border: 0.25px solid #777;
+    background: #333;
+    border-radius: 50px;
+   padding:0.2rem 0;
+    padding-right: 0.3rem;
+    transition:0.4s ease-in-out;
+}
+.search-container .search-input{
+    padding:0;
+    border:none;
+    border-radius:none;
+    font-size:16px;
+    border-radius: 50px;
+
+    background:#333;
+    padding: 0rem  0.5rem;
+    color: #ccc;
+    font-size: 0.9rem;
+    padding-right: 0.3rem;
+    transition:0.4s ease-in-out;
+}
+.search-button {
+    padding: 0;
+    background-color: #007bff;
+    color: #eee;
+    /* border: none; */
+    /* border-radius: 4px; */
+    cursor: pointer;
+    /* font-size: 14px; */
+    width: 26px;
+    height: 26px;
+    border: 0.25px solid #777;
+    border-radius: 50px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-direction: column; */
+    margin: auto;
+}
+.search-button i{
+    font-size: 1rem;
+    margin: auto;
+    padding: 0.2rem;
+}
+input:hover,input:active{
+    color:#efefef;
+    border:1px solid #777;
+    
+
+}
+.search-container {
+    border: 0.25px solid #777;
+    background: #333;
+    border-radius: 50px;
+    padding: 0.2rem 0;
+    padding-right: 0.3rem;
+    transition: 0.4s ease-in-out;
+}
+
+.search-container:hover {
+    border-color: #777; /* Adjust the border color on hover */
+}
+
+.search-container .search-input {
+    padding: 0;
+    border: none;
+    border-radius: none;
+    font-size: 16px;
+    border-radius: 50px;
+    background: #333;
+    padding: 0rem 0.5rem;
+    color: #ccc;
+    font-size: 0.9rem;
+    padding-right: 0.3rem;
+    transition: 0.4s ease-in-out;
+}
+
+.search-container:hover .search-input {
+    border-color: #777; /* Adjust the border color of the input on hover */
+}
+
+.search-button {
+    padding: 0;
+    background-color: #007bff;
+    color: #eee;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    border: 0.25px solid #777;
+    border-radius: 50px;
+    margin: auto;
+}
+
+.search-button i {
+    font-size: 1rem;
+    margin: auto;
+    padding: 0.2rem;
+}
+
+/* Adjust input styles on hover and active states */
+input:hover,
+input:active {
+    color: #efefef;
+    border: 1px solid #777;
+}
