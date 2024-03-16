@@ -26,6 +26,7 @@ const NewsComponent = (props) => {
     try {
       setLoading(true);
       const apiKey = props.apiKey;
+      props.setProgress(20)
       let url;
       const { country, category, pageSize, searchQuery } = props;
       if (searchQuery && searchQuery.length >= 3) {
@@ -33,16 +34,24 @@ const NewsComponent = (props) => {
       } else {
         url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}&page=${page}&pageSize=${pageSize}`;
       }
+      props.setProgress(25)
+
       const response = await fetch(url);
       if (!response.ok) {
           throw new Error('Failed to fetch news');
       }
+      props.setProgress(30)
+
       const data = await response.json();
+      props.setProgress(60)
+
       setArticles(data.articles);
       setLoading(false);
       setPage(page);
       setTotalResults(data.totalResults);
       setAllDataLoaded(articles.length + data.articles.length === data.totalResults); // Update allDataLoaded state
+      props.setProgress(100)
+
     } catch (error) {
       console.error('Error fetching news:', error);
       setLoading(false);

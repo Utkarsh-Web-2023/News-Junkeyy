@@ -1,3 +1,11 @@
+
+* {
+    font-family: "Average Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
 .news-container{
     display:flex;
     justify-content:center;
@@ -570,4 +578,25 @@ input:hover,
 input:active {
     color: #efefef;
     border: 1px solid #777;
+}
+.card-header {
+    font-size: 1.3rem;
+    padding: 0rem 0;
+    line-height: 1.5rem;
+    letter-spacing: 1.5px;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
+p {
+    font-size: 1rem;
+}
+.author {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #7c7c7c;
+}
+.date {
+    font-size: 0.85rem;
+    color: #9c9c9c;
+    text-transform: capitalize;
 }
